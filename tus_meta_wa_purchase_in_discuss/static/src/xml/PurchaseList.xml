@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template_ext" xml:space="preserve">
+    <t t-name="tus_meta_wa_purchase_in_discuss.PurchaseList" owl="1">
+        <div class="purchase_div">
+            <div class="purchase_quatation mt-1 pl-1">
+                <table id="purchase" class="display mt-2" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Customer</th>
+                            <th>Date Order</th>
+                            <th>Purchase Representative</th>
+                            <th>Total</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="purchase_order mt-1 pl-1">
+                <table id="purchase_orders" class="display mt-2" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Customer</th>
+                            <th>Date Order</th>
+                            <th>Purchase Representative</th>
+                            <th>Total</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </t>
+</templates>

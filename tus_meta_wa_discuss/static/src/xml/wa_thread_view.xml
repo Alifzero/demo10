@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="tus_meta_wa_discuss.WaThreadView" owl="1">
+        <div class="waThreadView" style="width: 50%; border-left: 1px solid #c7c5c5;">
+            <div class="o_notebook" style="position: absolute; width: 42%;height: 73%;">
+                <ul class="nav nav-tabs o-wa-threadview-nav" style="background-color: #504e48;position: relative;display: flex;">
+                    <li id="tab_partner" class="nav-item">
+                        <a data-toggle="tab" disable_anchor="true"
+                             role="tab" style="cursor: pointer;"
+                            t-attf-class="nav-link functional_tab {{state.nav_active == 'partner'? 'active':''}}" t-on-click="tabPartner">
+                            Client
+                        </a>
+                    </li>
+                     <li id="tab_agent" class="nav-item">
+                        <a data-toggle="tab" disable_anchor="true"
+                             role="tab" style="cursor: pointer;"
+                            t-attf-class="nav-link functional_tab {{state.nav_active == 'agent'? 'active':''}}" t-on-click="tab_agent">
+                            Agents
+                        </a>
+                    </li>
+                </ul>
+                <div class="row main-button" style="display: flex;position: relative;">
+                    <div class="col-6 back" style="padding: 16px;">
+                        <button class="btn btn-primary back_btn ml-4 o_hidden" type="button" t-on-click="onClickBack">Back</button>
+                    </div>
+                    <div class="col-6">
+                        <div id="main-buttons-view"/>
+                    </div>
+                </div>
+                <div class="" id="main-form-view">
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

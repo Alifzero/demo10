@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template_ext" xml:space="preserve">
+    <t t-name="WaThreadViewExt" t-inherit="tus_meta_wa_discuss.WaThreadView" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('o-wa-threadview-nav')]" position="inside">
+            <li id="tab_lead" class="nav-item">
+                <a data-toggle="tab" disable_anchor="true"
+                    role="tab" style="cursor: pointer;"
+                    t-attf-class="nav-link functional_tab {{state.nav_active == 'lead'? 'active':''}}" t-on-click="tabLead">
+                    Lead
+                </a>
+            </li>
+        </xpath>
+    </t>
+</templates>

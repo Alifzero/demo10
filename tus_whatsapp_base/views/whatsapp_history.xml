@@ -1,0 +1,57 @@
+<odoo>
+    <record model="ir.ui.view" id="whatsapp_history_form_view">
+        <field name="name">whatsapp.history.form</field>
+        <field name="model">whatsapp.history</field>
+        <field name="arch" type="xml">
+            <form string="WhatsApp History">
+                <header>
+                    <field name="type" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="provider_id"/>
+                            <field name="date"/>
+                            <field name="author_id"/>
+                            <field name="message"/>
+                            <field name="message_id"/>
+                            <field name="fail_reason"/>
+                        </group>
+                        <group>
+<!--                            <field name="type"/>-->
+                            <field name="partner_id"/>
+                            <field name="phone"/>
+                            <field name="attachment_ids" widget="many2many_tags"/>
+                            <field name="company_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record model="ir.ui.view" id="whatsapp_history_tree_view">
+        <field name="name">whatsapp.history.tree</field>
+        <field name="model">whatsapp.history</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="provider_id"/>
+                <field name="date"/>
+                <field name="author_id"/>
+                <field name="partner_id"/>
+                <field name="phone"/>
+                <field name="message"/>
+                <field name="attachment_ids" widget="many2many_tags"/>
+                <field name="type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="whatsapp_history_action">
+        <field name="name">WhatsApp History</field>
+        <field name="res_model">whatsapp.history</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="whatsapp_history_menu" name="WhatsApp History" parent="wa_msgs_menu" action="whatsapp_history_action" sequence="1" groups="tus_whatsapp_base.whatsapp_group_user"/>
+</odoo>
