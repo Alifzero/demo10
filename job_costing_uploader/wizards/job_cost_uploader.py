@@ -27,7 +27,7 @@ class JobCostingWizard(models.TransientModel):
             'uom_po_id': uom.id,
             'lst_price': cost,
             'standard_price': cost,
-            'type': type
+            'detailed_type': type
         })
         return product
 

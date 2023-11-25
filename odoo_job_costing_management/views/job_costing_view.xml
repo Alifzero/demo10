@@ -165,11 +165,11 @@
                 <field name="project_id"/>
                 <field name="start_date"/>
                 <field name="complete_date"/>
-                <field name="assumed_qty" />
+                <field name="assumed_qty"/>
                 <field name="overhead_profit" />
                 <field name="srb_tax" />
-                <field name="or_cost" />
-                <field name="jobcost_total" widget="monetary"/>
+                <field name="or_cost" sum="OR COST Total"/>
+                <field name="jobcost_total" widget="monetary" sum="JObcost_total"/>
                 <field name="company_id" invisible='1' groups="base.group_multi_company"/>
                 <field name="state"/>
             </tree>
