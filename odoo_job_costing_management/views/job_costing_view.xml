@@ -123,6 +123,7 @@
                                     <field name="reference"/>
                                     <field name="basis" invisible="1"/>
                                     <field name="product_qty" sum="Total"/>
+                                    <field name="hours" widget="float_time" sum="Total"/>
                                     <field name="uom_id"/>
                                     <field name="cost_price" sum="Total"/>
                                     <field name="actual_quantity" invisible="1" sum="Total"/>
@@ -164,6 +165,10 @@
                 <field name="project_id"/>
                 <field name="start_date"/>
                 <field name="complete_date"/>
+                <field name="assumed_qty" />
+                <field name="overhead_profit" />
+                <field name="srb_tax" />
+                <field name="or_cost" />
                 <field name="jobcost_total" widget="monetary"/>
                 <field name="company_id" invisible='1' groups="base.group_multi_company"/>
                 <field name="state"/>

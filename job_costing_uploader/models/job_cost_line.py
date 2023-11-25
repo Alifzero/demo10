@@ -19,7 +19,7 @@ class JobCostLine(models.Model):
     @api.depends('product_qty','hours','cost_price','direct_id')
     def _compute_total_cost(self):
         for rec in self:
-            if rec.job_type != 'material':
+            if rec.job_type == 'labour':
                 rec.total_cost = rec.product_qty * rec.hours * rec.cost_price
             else:
                 rec.hours = 0.0

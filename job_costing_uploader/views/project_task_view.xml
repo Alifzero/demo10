@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+    
+    <record id="view_task_form2_inherit_picking" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button string="Upload Costsheet" type="action" name="%(job_costing_uploader.action_upload_cost_sheet)d"
+                        class="oe_highlight"
+                        context="{'default_task_id': active_id}" />
+            </xpath>
+        </field>
+    </record>
+    
+    </data>
+</odoo>
